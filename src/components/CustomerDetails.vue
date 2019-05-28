@@ -10,15 +10,15 @@
       </span>
     </h1>
     <ul class="list-group">
-      <li class="list-group-item"><span class="glyphicon glyphicon-earphone">{{customer.phone}}</span></li>
-      <li class="list-group-item"><span class="glyphicon glyphicon-envelope">{{customer.email}}</span></li>
+      <li class="list-group-item"><span class="glyphicon glyphicon-earphone">&nbsp;&nbsp;{{customer.phone}}</span></li>
+      <li class="list-group-item"><span class="glyphicon glyphicon-envelope">&nbsp;&nbsp;{{customer.email}}</span></li>
     </ul>
 
     <ul class="list-group">
-      <li class="list-group-item"><span class="glyphicon glyphicon-user">{{customer.education}}</span></li>
-      <li class="list-group-item"><span class="glyphicon glyphicon-user">{{customer.graduationschool}}</span></li>
-      <li class="list-group-item"><span class="glyphicon glyphicon-user">{{customer.profession}}</span></li>
-      <li class="list-group-item"><span class="glyphicon glyphicon-user">{{customer.profile}}</span></li>
+      <li class="list-group-item"><span class="glyphicon glyphicon-user">&nbsp;&nbsp;{{customer.education}}</span></li>
+      <li class="list-group-item"><span class="glyphicon glyphicon-tower">&nbsp;&nbsp;{{customer.graduationschool}}</span></li>
+      <li class="list-group-item"><span class="glyphicon glyphicon-info-sign">&nbsp;&nbsp;{{customer.profession}}</span></li>
+      <li class="list-group-item"><span class="glyphicon glyphicon-file">&nbsp;&nbsp;{{customer.profile}}</span></li>
     </ul>
   </div>
 </template>

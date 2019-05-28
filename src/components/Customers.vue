@@ -69,5 +69,7 @@ export default{
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+.table>tbody>tr>td{
+  vertical-align: middle;
+}
 </style>
