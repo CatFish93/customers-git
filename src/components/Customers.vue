@@ -8,20 +8,20 @@
 
     <table class="table table-striped">
       <thead>
-          <tr>
-            <th>姓名</th>
-            <th>电话</th>
-            <th>邮箱</th>
-            <th></th>
-          </tr>
+        <tr>
+          <th>姓名</th>
+          <th>电话</th>
+          <th>邮箱</th>
+          <th></th>
+        </tr>
       </thead>
       <tbody>
-          <tr v-for="customer in filterBy(customers,filterInput)" :key="customer.id">
-            <td>{{customer.name}}</td>
-            <td>{{customer.phone}}</td>
-            <td>{{customer.email}}</td>
-            <td><router-link class="btn btn-default" v-bind:to="'/customer/'+customer.id">详情</router-link></td>
-          </tr>
+        <tr v-for="customer in filterBy(customers,filterInput)" :key="customer.id">
+          <td>{{customer.name}}</td>
+          <td>{{customer.phone}}</td>
+          <td>{{customer.email}}</td>
+          <td><router-link class="btn btn-default" v-bind:to="'/customer/'+customer.id">详情</router-link></td>
+        </tr>
       </tbody>
     </table> 
   </div>
@@ -33,23 +33,23 @@ export default{
     name: 'customers',
     data () {
       return {
-          customers:[],
-          alert:"" ,
-          filterInput:""
+        customers:[],
+        alert:"" ,
+        filterInput:""
       }
     },
     methods: {
-        fetchCustomers(){
-            this.$http.get("http://localhost:3000/users").then(function(response){
-            //   console.log(response);
-            this.customers = response.body;
-            })
-        },
-        filterBy(customers,value){
-            return customers.filter(function(customer){
-                return customer.name.match(value);
-            })
-        }
+      fetchCustomers(){
+        this.$http.get("http://localhost:3000/users").then(function(response){
+        //   console.log(response);
+        this.customers = response.body;
+        })
+      },
+      filterBy(customers,value){
+        return customers.filter(function(customer){
+            return customer.name.match(value);
+        })
+      }
     },
     created(){
         if(this.$route.query.alert){

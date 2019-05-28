@@ -32,18 +32,18 @@ export default {
     }
   },
   methods: {
-      fetchCustomers(id){
-          this.$http.get("http://localhost:3000/users/"+id).then(function(response){
-            //   console.log(response);
-            this.customer = response.body;
-          })
-      },
-      deleteCustomer(id){
-        // console.log(id);
-        this.$http.delete("http://localhost:3000/users/"+id).then(function(response){
-          this.$router.push({path:"/",query:{alert:"用户删除成功！"}})
-        })
-      }
+    fetchCustomers(id){
+      this.$http.get("http://localhost:3000/users/"+id).then(function(response){
+        //   console.log(response);
+        this.customer = response.body;
+      })
+    },
+    deleteCustomer(id){
+      // console.log(id);
+      this.$http.delete("http://localhost:3000/users/"+id).then(function(response){
+        this.$router.push({path:"/",query:{alert:"用户删除成功！"}})
+      })
+    }
   },
   created(){
     this.fetchCustomers(this.$route.params.id);
